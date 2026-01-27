@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratório de Redes – UFS</title>
+  <style>
+    :root {
+      --bg: #0f172a;        /* slate-900 */
+      --card: #111827;      /* gray-900 */
+      --text: #e5e7eb;      /* gray-200 */
+      --muted: #9ca3af;     /* gray-400 */
+      --accent: #38bdf8;    /* sky-400 */
+      --border: #1f2937;    /* gray-800 */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
+      background: radial-gradient(1200px 600px at 10% -10%, #0b1220, transparent), var(--bg);
+      color: var(--text);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #0b1220, transparent);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    h2 { margin-top: 32px; font-size: 1.4rem; }
+    p { color: var(--muted); line-height: 1.6; }
+    .badge { display: inline-block; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--accent); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid var(--border); border-radius: 14px; padding: 16px;
+    }
+    ul { padding-left: 18px; }
+    .topologia { margin-top: 16px; border: 1px dashed var(--border); border-radius: 14px; padding: 12px; text-align: center; }
+    .topologia img { max-width: 100%; height: auto; border-radius: 10px; }
+    footer { border-top: 1px solid var(--border); margin-top: 40px; }
+    .muted { color: var(--muted); }
+    .kv { display: grid; grid-template-columns: 140px 1fr; gap: 6px 12px; }
+    .kv div:nth-child(odd) { color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <span class="badge">Projeto de Redes</span>
+      <h1>Laboratório de Redes – UFS</h1>
+      <p>Site institucional do laboratório proposto, com topologia emulada no CORE.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <h2>Identificação</h2>
+        <div class="kv">
+          <div>Aluno</div><div>João Paulo Menezes Machado</div>
+          <div>Curso</div><div>Engenharia de Computação</div>
+          <div>Centro/Campus</div><div>Campus do Sertão</div>
+          <div>Cliente</div><div>Gustavo Hugo Ferreira de Oliveira</div>
+          <div>Simulador</div><div>CORE (Common Open Research Emulator)</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Objetivo</h2>
+        <p>Apresentar a proposta do laboratório de redes do Grupo de Estudos em Melhoramento Vegetal do Semiárido, documentando a topologia, os dispositivos e a emulação realizada no CORE, com versionamento em repositório GitHub e disponibilização automática via Docker.</p>
+      </div>
+
+      <div class="card">
+        <h2>Tecnologias</h2>
+        <ul>
+          <li>HTML5 / CSS3</li>
+          <li>Docker + Nginx</li>
+          <li>CORE (arquivo .imn)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Topologia da Rede</h2>
+      <p class="muted">Abaixo, a imagem exportada da topologia (PDF no repositório em <code>docs/</code> e projeto em <code>rede/</code>).</p>
+      <div class="topologia">
+        <!-- Substitua o src pelo PNG exportado do CORE -->
+        <img src="img/topologia.png" alt="Topologia da Rede (CORE)" />
+        <p class="muted">Técnico Responsável: João Paulo Menezes Machado</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Descrição Técnica</h2>
+        <p>
+          O Laboratório de Melhoramento Vegetal do Semiárido possui uma rede local organizada, 
+          composta por estações de trabalho, um servidor central, switch e roteador/gateway, 
+          permitindo que estudantes e pesquisadores acessem dados e aplicações de pesquisa de forma segura e eficiente. 
+          A topologia da rede é segmentada por VLANs para separar PCs, servidor e dispositivos opcionais, garantindo conectividade confiável, 
+          gerenciamento de tráfego e suporte às atividades acadêmicas e experimentos vegetais. A infraestrutura inclui rack, cabeamento estruturado 
+          e nobreak, assegurando organização e continuidade operacional do laboratório.
+        </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="muted">© UFS — Projeto Acadêmico</p>
+    </div>
+  </footer>
+</body>
+</html>

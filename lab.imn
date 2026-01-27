@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core version="5">
+  <session>
+    <name>Lab_Melhoramento_Vegetal</name>
+    <description>Laboratório de melhoramento vegetal do semiárido - Técnico: SEU_NOME</description>
+    <nodes>
+      <!-- Router / Gateway -->
+      <node id="1" type="router" name="R-LAB" x="400" y="50"/>
+      
+      <!-- Switch Camada 2 -->
+      <node id="2" type="switch" name="S-LAB" x="400" y="200"/>
+      
+      <!-- PCs -->
+      <node id="3" type="host" name="PC1" x="100" y="350"/>
+      <node id="4" type="host" name="PC2" x="200" y="350"/>
+      <node id="5" type="host" name="PC3" x="300" y="350"/>
+      <node id="6" type="host" name="PC4" x="400" y="350"/>
+      <node id="7" type="host" name="PC5" x="500" y="350"/>
+      <node id="8" type="host" name="PC6" x="600" y="350"/>
+      <node id="9" type="host" name="PC7" x="700" y="350"/>
+      <node id="10" type="host" name="PC8" x="800" y="350"/>
+      <node id="11" type="host" name="PC9" x="900" y="350"/>
+      <node id="12" type="host" name="PC10" x="1000" y="350"/>
+      
+      <!-- Servidor -->
+      <node id="13" type="host" name="SRV-LAB" x="400" y="500"/>
+    </nodes>
+    
+    <links>
+      <!-- Conexões Router ↔ Switch -->
+      <link source="1" target="2"/>
+      
+      <!-- Conexões Switch ↔ PCs -->
+      <link source="2" target="3"/>
+      <link source="2" target="4"/>
+      <link source="2" target="5"/>
+      <link source="2" target="6"/>
+      <link source="2" target="7"/>
+      <link source="2" target="8"/>
+      <link source="2" target="9"/>
+      <link source="2" target="10"/>
+      <link source="2" target="11"/>
+      <link source="2" target="12"/>
+      
+      <!-- Conexão Switch ↔ Servidor -->
+      <link source="2" target="13"/>
+    </links>
+  </session>
+</core>
